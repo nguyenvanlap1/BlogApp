@@ -7,9 +7,6 @@
   },
   "author": "",
   "license": "ISC",
-  "engines":{
-  "node": "20.16.0"
-  },
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
