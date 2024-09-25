@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require('ejs');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
-
+const cors = require('cors');
 
 const authMiddleware = require('./middleware/authMiddleware');
 const redirectlfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware');
@@ -49,6 +49,8 @@ app.use("*", (req, res, next) => {
     loggedIn = req.session.userId;
     next();
 })
+
+app.use(cors());
 
 
 app.get('/', homeController);
